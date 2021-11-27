@@ -19,8 +19,6 @@ export default function WeatherApp() {
   }
 
   function showData(response) {
-    console.log(response);
-
     setStatistics({
       temperature: response.data.main.temp,
       minTemp: response.data.main.temp_min,
@@ -28,16 +26,26 @@ export default function WeatherApp() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
     });
   }
 
   return (
     <div className="WeatherApp">
-      Right now in{" "}
-      <form onSubmit={handleSubmit}>
-        <input type="Search" onChange={handleInput} />
-      </form>
-      there's {statistics.description}.
+      <div className="row">
+        <div className="col ">Right now in </div>
+        <div className="col">
+          <form onSubmit={handleSubmit}>
+            <input
+              className="form-control-plaintext"
+              type="Search"
+              onChange={handleInput}
+              autoFocus="on"
+            />
+          </form>
+        </div>
+        <div className="col">there's {statistics.description}.</div>
+      </div>
       <WeatherStats stats={statistics} />
       <footer>
         This project was coded by Tanimola Somolu and is{" "}

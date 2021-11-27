@@ -1,0 +1,20 @@
+.WeatherApp {
+  display: block;
+  text-align: center;
+  margin: 50px;
+  max-width: 50%;
+}
+
+.mainTemp {
+  font-size: 100px;
+}
+
+.minMax {
+  font-size: 15px;
+  text-align: center;
+}
+
+.wind,
+.humidity {
+  font-size: 25px;
+}
