@@ -1,52 +1,34 @@
 import React from "react";
-import sunny from "./images/Asset 2.png";
-import sunnyclouds from "./images/Asset 3.png";
-import sun from "./images/Asset 4.png";
-import snow from "./images/Asset 6.png";
-import windyrain from "./images/Asset 7.png";
-import rain from "./images/Asset 8.png";
-import sunclouds from "./images/Asset 10.png";
-import wind from "./images/Asset 13.png";
-import thunder from "./images/Asset 16.png";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
-  console.log(props.icon);
-  switch (props.icon) {
-    case "01d":
-    case "01n":
-      return <img src={sunny} alt="" className="weatherImage" />;
+  let iconMapping = {
+    "01d": "CLEAR_DAY",
+    "01n": "CLEAR_NIGHT",
+    "02d": "PARTLY_CLOUDY_DAY",
+    "02n": "PARTLY_CLOUDY_NIGHT",
+    "03d": "CLOUDY",
+    "03n": "CLOUDY",
+    "04d": "CLOUDY",
+    "04n": "CLOUDY",
+    "09d": "RAIN",
+    "09n": "RAIN",
+    "10d": "RAIN",
+    "10n": "RAIN",
+    "11d": "SLEET",
+    "11n": "SLEET",
+    "13d": "SNOW",
+    "13n": "SNOW",
+    "50d": "FOG",
+    "50n": "FOG",
+  };
 
-    case "02d":
-    case "02n":
-      return <img src={sunnyclouds} alt=" " className="weatherImage" />;
-
-    case "03d":
-    case "03n":
-    case "04n":
-    case "04d":
-      return <img src={sunclouds} alt=" " className="weatherImage" />;
-
-    case "09d":
-    case "09n":
-      return <img src={rain} alt=" " className="weatherImage" />;
-
-    case "10d":
-    case "10n":
-      return <img src={windyrain} alt=" " className="weatherImage" />;
-
-    case "11d":
-    case "11n":
-      return <img src={thunder} alt="" className="weatherImage" />;
-
-    case "13d":
-    case "13n":
-      return <img src={snow} alt="" className="weatherImage" />;
-
-    case "50d":
-    case "50n":
-      return <img src={wind} alt="" className="weatherImage" />;
-
-    default:
-      return <img src={sun} alt="" className="weatherImage" />;
-  }
+  return (
+    <ReactAnimatedWeather
+      icon={iconMapping[props.icon]}
+      color="grey"
+      size={150}
+      animate={true}
+    />
+  );
 }

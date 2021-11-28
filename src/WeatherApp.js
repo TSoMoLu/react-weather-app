@@ -47,7 +47,7 @@ export default function WeatherApp() {
         <div className="col">there's {statistics.description}.</div>
       </div>
       <WeatherStats stats={statistics} />
-      <footer>
+      <footer className="signature">
         This project was coded by Tanimola Somolu and is{" "}
         <a
           href="https://github.com/TSoMoLu/react-weather-app"

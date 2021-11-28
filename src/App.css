@@ -1,7 +1,7 @@
 .WeatherApp {
   display: block;
-  text-align: center;
-  margin: 50px;
+  margin: auto;
+  padding: 100px;
   max-width: 50%;
 }
 
@@ -17,4 +17,11 @@
 .wind,
 .humidity {
   font-size: 25px;
+}
+.signature {
+  margin-top: 35px;
+}
+
+.weatherImage {
+  width: 75px;
 }
