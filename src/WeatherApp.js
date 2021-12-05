@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./App.css";
 import WeatherStats from "./WeatherStats";
+import Grammar from "./Grammar";
 
 export default function WeatherApp() {
   let [city, setCity] = useState("");
@@ -10,7 +11,6 @@ export default function WeatherApp() {
   let [input, setInput] = useState(false);
   let apiKey = "ffeb16c2d5b651aa562f048e606b7089";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  let [grammar, setGrammar] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -30,17 +30,7 @@ export default function WeatherApp() {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
-    console.log(statistics.icon);
-    if (
-      statistics.icon === "02d" ||
-      statistics.icon === "02n" ||
-      statistics.icon === "03d" ||
-      statistics.icon === "03n" ||
-      statistics.icon === "04d" ||
-      statistics.icon === "04n"
-    ) {
-      setGrammar("there are ");
-    }
+
     setInput(true);
   }
 
@@ -60,9 +50,12 @@ export default function WeatherApp() {
               />
             </form>
           </div>
+
           <div className="col phrase2">
-            {grammar}
-            {statistics.description}.
+            <Grammar
+              icon={statistics.icon}
+              description={statistics.description}
+            />
           </div>
         </div>
         <br />

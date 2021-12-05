@@ -11,7 +11,7 @@ export default function WeatherStats(props) {
         <div className="col">
           <div className="mainTemp">{Math.round(props.stats.temperature)}°</div>
           <div className=" minMax ">
-            {Math.round(props.stats.minTemp)}° /{" "}
+            {Math.round(props.stats.minTemp)}°/{" "}
             {Math.round(props.stats.maxTemp)}°
           </div>
         </div>
