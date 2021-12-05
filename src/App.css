@@ -2,7 +2,7 @@
   display: block;
   margin: auto;
   padding: 100px;
-  max-width: 50%;
+  max-width: 65%;
 }
 
 .mainTemp {
@@ -11,17 +11,42 @@
 
 .minMax {
   font-size: 15px;
-  text-align: center;
+  padding-left: 27px;
 }
 
 .wind,
 .humidity {
   font-size: 25px;
+  margin-top: 15px;
+}
+
+.windHum {
+  margin-top: 15px;
+}
+.weatherVisual {
+  margin-left: 80px;
+}
+
+.unit {
+  font-size: 10px;
 }
 .signature {
-  margin-top: 35px;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 25px;
 }
 
 .weatherImage {
   width: 75px;
+}
+
+.form-control-plaintext {
+  padding: 0px;
+}
+
+.phrase1 {
+  text-align: right;
+}
+.phrase2 {
+  text-align: left;
 }
