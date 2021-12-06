@@ -14,7 +14,8 @@
     "react-scripts": "4.0.3",
     "weather-icons-react": "^1.2.0",
     "weather-react-icons": "^4.0.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import "./App.css";
+import "./Style/App.css";
 import WeatherStats from "./WeatherStats";
 import Grammar from "./Grammar";
+import sunrise from "./Images/sunrise.jpg";
 
 export default function WeatherApp() {
   let [city, setCity] = useState("");
@@ -36,53 +37,73 @@ export default function WeatherApp() {
 
   if (input) {
     return (
-      <div className="WeatherApp">
-        <div className="row ">
-          <div className="col phrase1">Right now in </div>
-          <div className="col">
-            <form onSubmit={handleSubmit}>
-              <input
-                className="form-control-plaintext text-center"
-                type="Search"
-                onChange={handleInput}
-                autoFocus="on"
-                placeholder={city}
+      <div
+        style={{
+          backgroundImage: `url(${sunrise})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          height: 1500,
+          width: 1500,
+        }}
+      >
+        <div className="WeatherApp ">
+          <div className="row ">
+            <div className="col phrase1">Right now in </div>
+            <div className="col-3">
+              <form onSubmit={handleSubmit}>
+                <input
+                  className="form-control-plaintext text-center"
+                  type="Search"
+                  onChange={handleInput}
+                  autoFocus="on"
+                  placeholder={city}
+                />
+              </form>
+            </div>
+
+            <div className="col phrase2">
+              <Grammar
+                icon={statistics.icon}
+                description={statistics.description}
               />
-            </form>
+            </div>
           </div>
 
-          <div className="col phrase2">
-            <Grammar
-              icon={statistics.icon}
-              description={statistics.description}
-            />
-          </div>
+          <WeatherStats stats={statistics} />
+          <footer className="signature">
+            This project was coded by Tanimola Somolu and is{" "}
+            <a
+              href="https://github.com/TSoMoLu/react-weather-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-sourced
+            </a>
+          </footer>
         </div>
-        <br />
-        <WeatherStats stats={statistics} />
-        <footer className="signature">
-          This project was coded by Tanimola Somolu and is{" "}
-          <a
-            href="https://github.com/TSoMoLu/react-weather-app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            open-sourced
-          </a>
-        </footer>
       </div>
     );
   } else {
     return (
-      <div className="WeatherApp">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="Search"
-            autoFocus="on"
-            placeholder="Enter a city"
-            onChange={handleInput}
-          />
-        </form>
+      <div
+        style={{
+          backgroundImage: `url(${sunrise})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          height: 1500,
+          width: 1500,
+        }}
+      >
+        <div className="WeatherApp">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="Search"
+              autoFocus="on"
+              placeholder="Enter a city"
+              onChange={handleInput}
+            />
+          </form>
+        </div>
       </div>
     );
   }

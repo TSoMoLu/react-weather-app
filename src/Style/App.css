@@ -1,0 +1,70 @@
+.WeatherApp {
+  display: block;
+  margin: auto;
+  padding: 100px;
+  max-width: 65%;
+}
+
+.mainTemp {
+  font-size: 100px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-left: 20px;
+}
+
+.minMax {
+  font-size: 15px;
+  padding-left: 34px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.wind,
+.humidity {
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.windHum {
+  margin-top: 15px;
+}
+
+.weatherVisual {
+  margin-left: 115px;
+}
+
+.unit {
+  font-size: 10px;
+}
+.signature {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 40px;
+  font-size: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.weatherImage {
+  width: 75px;
+}
+
+.weatherImageSmall {
+  width: 22px;
+}
+
+.form-control-plaintext {
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.phrase1 {
+  text-align: right;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+}
+.phrase2 {
+  text-align: left;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+}
