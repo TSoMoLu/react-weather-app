@@ -4,7 +4,6 @@ import axios from "axios";
 import "./Style/App.css";
 import WeatherStats from "./WeatherStats";
 import Grammar from "./Grammar";
-import sunrise from "./Images/sunrise.jpg";
 import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherApp() {
@@ -40,74 +39,54 @@ export default function WeatherApp() {
 
   if (input) {
     return (
-      <div
-        style={{
-          backgroundImage: `url(${sunrise})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          height: 1500,
-          width: 1500,
-        }}
-      >
-        <div className="WeatherApp ">
-          <div className="row ">
-            <div className="col phrase1">Right now in </div>
-            <div className="col-3">
-              <form onSubmit={handleSubmit}>
-                <input
-                  className="form-control-plaintext text-center"
-                  type="Search"
-                  onChange={handleInput}
-                  autoFocus="on"
-                  placeholder={city}
-                />
-              </form>
-            </div>
-
-            <div className="col phrase2">
-              <Grammar
-                icon={statistics.icon}
-                description={statistics.description}
+      <div className="WeatherApp ">
+        <div className="row ">
+          <div className="col phrase1">Right now in </div>
+          <div className="col-3">
+            <form onSubmit={handleSubmit}>
+              <input
+                className="form-control-plaintext text-center"
+                type="Search"
+                onChange={handleInput}
+                autoFocus="on"
+                placeholder={city}
               />
-            </div>
+            </form>
           </div>
 
-          <WeatherStats stats={statistics} />
-          <WeatherForecast stats={statistics} />
-          <footer className="signature">
-            This project was coded by Tanimola Somolu and is{" "}
-            <a
-              href="https://github.com/TSoMoLu/react-weather-app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              open-sourced
-            </a>
-          </footer>
+          <div className="col phrase2">
+            <Grammar
+              icon={statistics.icon}
+              description={statistics.description}
+            />
+          </div>
         </div>
+
+        <WeatherStats stats={statistics} />
+        <WeatherForecast stats={statistics} />
+        <footer className="signature">
+          This project was coded by Tanimola Somolu and is{" "}
+          <a
+            href="https://github.com/TSoMoLu/react-weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-sourced
+          </a>
+        </footer>
       </div>
     );
   } else {
     return (
-      <div
-        style={{
-          backgroundImage: `url(${sunrise})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          height: 1500,
-          width: 1500,
-        }}
-      >
-        <div className="WeatherApp">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="Search"
-              autoFocus="on"
-              placeholder="Enter a city"
-              onChange={handleInput}
-            />
-          </form>
-        </div>
+      <div className="WeatherApp">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="Search"
+            autoFocus="on"
+            placeholder="Enter a city"
+            onChange={handleInput}
+          />
+        </form>
       </div>
     );
   }
