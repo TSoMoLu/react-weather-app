@@ -8,7 +8,7 @@ export default function WeatherStats(props) {
     <div className="WeatherStats">
       <div className="row weatherVisual">
         <div className="col">
-          <WeatherIcon icon={props.stats.icon} />
+          <WeatherIcon icon={props.stats.icon} size={150} />
         </div>
         <div className="col">
           <div className="mainTemp">{Math.round(props.stats.temperature)}</div>

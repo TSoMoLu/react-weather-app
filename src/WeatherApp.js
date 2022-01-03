@@ -5,6 +5,7 @@ import "./Style/App.css";
 import WeatherStats from "./WeatherStats";
 import Grammar from "./Grammar";
 import sunrise from "./Images/sunrise.jpg";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherApp() {
   let [city, setCity] = useState("");
@@ -30,8 +31,10 @@ export default function WeatherApp() {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
     });
-
+    console.log(response.data.coord.lat);
     setInput(true);
   }
 
@@ -70,6 +73,7 @@ export default function WeatherApp() {
           </div>
 
           <WeatherStats stats={statistics} />
+          <WeatherForecast stats={statistics} />
           <footer className="signature">
             This project was coded by Tanimola Somolu and is{" "}
             <a

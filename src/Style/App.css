@@ -24,6 +24,11 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
+.ForecastTemp,
+.ForecastDay {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+}
 .windHum {
   margin-top: 15px;
 }
@@ -67,4 +72,9 @@
   text-align: left;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
+}
+
+.WeatherForecastDay {
+  text-align: center;
+  padding-top: 20px;
 }
