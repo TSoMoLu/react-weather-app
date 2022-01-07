@@ -32,7 +32,6 @@ export default function WeatherApp() {
       icon: response.data.weather[0].icon,
       coordinates: response.data.coord,
     });
-    console.log(response.data.coord.lat);
     setInput(true);
   }
 
