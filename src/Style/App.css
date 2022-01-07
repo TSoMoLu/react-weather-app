@@ -8,7 +8,7 @@
 .mainTemp {
   font-size: 100px;
   font-family: "Source Sans Pro", sans-serif;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .minMax {
@@ -44,12 +44,12 @@
   margin-top: 50px;
   text-align: center;
   margin-left: 40px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Source Sans Pro", sans-serif;
 }
 
 .weatherImage {
-  width: 75px;
+  margin-top: 25px;
 }
 
 .weatherImageSmall {
@@ -58,7 +58,7 @@
 
 .form-control-plaintext {
   padding: 0px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
   font-weight: bolder;
 }

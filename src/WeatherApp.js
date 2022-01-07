@@ -30,8 +30,7 @@ export default function WeatherApp() {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      lat: response.data.coord.lat,
-      lon: response.data.coord.lon,
+      coordinates: response.data.coord,
     });
     console.log(response.data.coord.lat);
     setInput(true);
@@ -63,7 +62,7 @@ export default function WeatherApp() {
         </div>
 
         <WeatherStats stats={statistics} />
-        <WeatherForecast stats={statistics} />
+        <WeatherForecast coordinates={statistics.coordinates} />
         <footer className="signature">
           This project was coded by Tanimola Somolu and is{" "}
           <a

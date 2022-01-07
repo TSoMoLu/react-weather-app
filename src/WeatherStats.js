@@ -7,8 +7,8 @@ export default function WeatherStats(props) {
   return (
     <div className="WeatherStats">
       <div className="row weatherVisual">
-        <div className="col">
-          <WeatherIcon icon={props.stats.icon} size={150} />
+        <div className="col weatherImage">
+          <WeatherIcon icon={props.stats.icon} size={120} />
         </div>
         <div className="col">
           <div className="mainTemp">{Math.round(props.stats.temperature)}</div>
@@ -20,12 +20,12 @@ export default function WeatherStats(props) {
         <div className="col align-self-center">
           <div className="wind">
             {" "}
-            <img src={wind} alt="" className="weatherImageSmall" />
+            <img src={wind} alt="" className="weatherImageSmall" />{" "}
             {Math.round(props.stats.wind)} <span className="unit">km/h</span>
           </div>
 
           <div className="humidity">
-            <img src={humidity} alt="" className="weatherImageSmall" />
+            <img src={humidity} alt="" className="weatherImageSmall" />{" "}
             {Math.round(props.stats.humidity)} <span className="unit">%</span>
           </div>
         </div>
